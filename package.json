@@ -1,0 +1,98 @@
+{
+  "name": "jmv",
+  "version": "0.1.0",
+  "description": "jupyter moon view",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension",
+    "widgets"
+  ],
+  "files": [
+    "lib/**/*.js",
+    "dist/*.js",
+    "css/*.css"
+  ],
+  "homepage": "https://github.com/KaivnD/jmv",
+  "bugs": {
+    "url": "https://github.com/KaivnD/jmv/issues"
+  },
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "KaivnD",
+    "email": "KaivnD@hotmail.com"
+  },
+  "main": "lib/index.js",
+  "types": "./lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KaivnD/jmv"
+  },
+  "scripts": {
+    "build": "pnpm run build:lib && pnpm run build:nbextension && pnpm run build:labextension:dev",
+    "build:prod": "pnpm run build:lib && pnpm run build:nbextension && pnpm run build:labextension",
+    "build:labextension": "jupyter labextension build .",
+    "build:labextension:dev": "jupyter labextension build --development True .",
+    "build:lib": "tsc",
+    "build:nbextension": "webpack",
+    "clean": "pnpm run clean:lib && pnpm run clean:nbextension && pnpm run clean:labextension",
+    "clean:lib": "rimraf lib",
+    "clean:labextension": "rimraf jmv/labextension",
+    "clean:nbextension": "rimraf jmv/nbextension/static/index.js",
+    "lint": "eslint . --ext .ts,.tsx --fix",
+    "lint:check": "eslint . --ext .ts,.tsx",
+    "prepack": "pnpm run build:lib",
+    "test": "jest",
+    "watch": "npm-run-all -p watch:*",
+    "watch:lib": "tsc -w",
+    "watch:nbextension": "webpack --watch --mode=development",
+    "watch:labextension": "jupyter labextension watch ."
+  },
+  "dependencies": {
+    "@jupyter-widgets/base": "^1.1.10 || ^2.0.0 || ^3.0.0 || ^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@jupyterlab/builder": "^3.0.0",
+    "@phosphor/application": "^1.6.0",
+    "@phosphor/widgets": "^1.6.0",
+    "@types/jest": "^26.0.24",
+    "@types/three": "^0.144.0",
+    "@types/webpack-env": "^1.13.6",
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
+    "acorn": "^7.2.0",
+    "crypto": "1.0.1",
+    "css-loader": "^3.2.0",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "fs-extra": "^7.0.0",
+    "htm": "^3.1.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.0.0",
+    "mkdirp": "^0.5.1",
+    "npm-run-all": "^4.1.3",
+    "prettier": "^2.0.5",
+    "rimraf": "^2.6.2",
+    "source-map-loader": "^1.1.3",
+    "style-loader": "^1.0.0",
+    "three": "^0.145.0",
+    "ts-jest": "^26.0.0",
+    "ts-loader": "^8.0.0",
+    "typescript": "~4.1.3",
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.0.0"
+  },
+  "jupyterlab": {
+    "extension": "lib/plugin",
+    "outputDir": "jmv/labextension/",
+    "sharedPackages": {
+      "@jupyter-widgets/base": {
+        "bundled": false,
+        "singleton": true
+      }
+    }
+  }
+}
