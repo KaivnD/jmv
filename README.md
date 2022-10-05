@@ -5,7 +5,7 @@
 [![codecov](https://codecov.io/gh/KaivnD/jmv/branch/master/graph/badge.svg)](https://codecov.io/gh/KaivnD/jmv)
 
 
-jupyter moon view
+jupyter multiple viewer
 
 ## Installation
 
@@ -25,7 +25,7 @@ jupyter nbextension enable --py [--sys-prefix|--user|--system] jmv
 
 Create a dev environment:
 ```bash
-conda create -n jmv-dev -c conda-forge nodejs pnpm python jupyterlab
+conda create -n jmv-dev -c conda-forge python jupyterlab
 conda activate jmv-dev
 ```
 

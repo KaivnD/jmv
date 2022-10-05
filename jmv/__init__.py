@@ -4,7 +4,7 @@
 # Copyright (c) KaivnD.
 # Distributed under the terms of the Modified BSD License.
 
-from .example import DisplayPortal
+from .threedp import DisplayPortal, hide
 from ._version import __version__, version_info
 
 def _jupyter_labextension_paths():

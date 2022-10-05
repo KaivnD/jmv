@@ -154,3 +154,4 @@ jmv/labextension/*.tgz
 
 # Packed lab extensions
 jmv/labextension
+.virtual_documents

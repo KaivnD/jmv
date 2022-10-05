@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  3dp: ^0.0.1
   '@babel/core': ^7.5.0
   '@babel/preset-env': ^7.5.0
   '@jupyter-widgets/base': ^1.1.10 || ^2.0.0 || ^3.0.0 || ^4.0.0
@@ -8,7 +9,6 @@ specifiers:
   '@phosphor/application': ^1.6.0
   '@phosphor/widgets': ^1.6.0
   '@types/jest': ^26.0.24
-  '@types/three': ^0.144.0
   '@types/webpack-env': ^1.13.6
   '@typescript-eslint/eslint-plugin': ^3.6.0
   '@typescript-eslint/parser': ^3.6.0
@@ -28,7 +28,6 @@ specifiers:
   rimraf: ^2.6.2
   source-map-loader: ^1.1.3
   style-loader: ^1.0.0
-  three: ^0.145.0
   ts-jest: ^26.0.0
   ts-loader: ^8.0.0
   typescript: ~4.1.3
@@ -39,13 +38,13 @@ dependencies:
   '@jupyter-widgets/base': 4.1.1_crypto@1.0.1
 
 devDependencies:
+  3dp: 0.0.1
   '@babel/core': 7.19.3
   '@babel/preset-env': 7.19.3_@babel+core@7.19.3
   '@jupyterlab/builder': 3.4.7_crypto@1.0.1
   '@phosphor/application': 1.7.3
   '@phosphor/widgets': 1.9.3
   '@types/jest': 26.0.24
-  '@types/three': 0.144.0
   '@types/webpack-env': 1.18.0
   '@typescript-eslint/eslint-plugin': 3.10.1_lojksvnl7pxz2d2tc2lijkhh44
   '@typescript-eslint/parser': 3.10.1_j5k3gtgvc7l7uexttprsfsq27m
@@ -65,7 +64,6 @@ devDependencies:
   rimraf: 2.7.1
   source-map-loader: 1.1.3_webpack@5.74.0
   style-loader: 1.3.0_webpack@5.74.0
-  three: 0.145.0
   ts-jest: 26.5.6_kr2752uoyhdjypzhm2ujrwvfgi
   ts-loader: 8.4.0_fnmmkgnotzhjrbdz7cyg2sva6e
   typescript: 4.1.6
@@ -73,6 +71,10 @@ devDependencies:
   webpack-cli: 4.10.0_webpack@5.74.0
 
 packages:
+
+  /3dp/0.0.1:
+    resolution: {integrity: sha512-xORmlUBSJKHAkyVVhzwUU2Zmwj94Ba+cp8HRlcdtf8nRnr+7DzSRs9Mlh3imZG98VArf4GlUIY4OftA5rrl8WQ==}
+    dev: true
 
   /@ampproject/remapping/2.2.0:
     resolution: {integrity: sha512-qRmjj8nj9qmLTQXXmaR1cck3UXSRMPrbsLJAasZpF+t3riI71BXed5ebIOYwQntykeZuhjsdweEc9BxH5Jc26w==}
@@ -2146,12 +2148,6 @@ packages:
     resolution: {integrity: sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==}
     dev: true
 
-  /@types/three/0.144.0:
-    resolution: {integrity: sha512-psvEs6q5rLN50jUYZ3D4pZMfxTbdt3A243blt0my7/NcL6chaCZpHe2csbCtx0SOD9fI/XnF3wnVUAYZGqCSYg==}
-    dependencies:
-      '@types/webxr': 0.5.0
-    dev: true
-
   /@types/underscore/1.11.4:
     resolution: {integrity: sha512-uO4CD2ELOjw8tasUrAhvnn2W4A0ZECOvMjCivJr4gA9pGgjv+qxKWY9GLTMVEK8ej85BxQOocUyE7hImmSQYcg==}
     dev: false
@@ -2166,10 +2162,6 @@ packages:
       '@types/node': 18.7.23
       '@types/source-list-map': 0.1.2
       source-map: 0.6.1
-    dev: true
-
-  /@types/webxr/0.5.0:
-    resolution: {integrity: sha512-IUMDPSXnYIbEO2IereEFcgcqfDREOgmbGqtrMpVPpACTU6pltYLwHgVkrnYv0XhWEcjio9sYEfIEzgn3c7nDqA==}
     dev: true
 
   /@types/yargs-parser/21.0.0:
@@ -8145,10 +8137,6 @@ packages:
 
   /text-table/0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
-    dev: true
-
-  /three/0.145.0:
-    resolution: {integrity: sha512-EKoHQEtEJ4CB6b2BGMBgLZrfwLjXcSUfoI/MiIXUuRpeYsfK5aPWbYhdtIVWOH+x6X0TouldHKHBuc/LAiFzAw==}
     dev: true
 
   /throat/5.0.0:
